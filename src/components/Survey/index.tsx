@@ -1,10 +1,12 @@
-import { Button } from "../Button";
 
+import Modal from 'react-modal';
+import { Button } from "../Button";
 import styles from './styles.module.scss'
 
 export function Survey() {
     return(
     <div className={ styles.container }>
+        <h1>Como você avalia nosso atendimento?</h1>
         <div className={ styles.content }>
             <Button 
             image="./insatisfeito.svg" 
