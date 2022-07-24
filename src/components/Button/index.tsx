@@ -14,8 +14,17 @@ export function Button(props: ButtonProps) {
     const [ count, setCount ] = useState(0);
     const [ modalIsOpen, setIsOpen ] = useState(false)
 
-
-    //Modal.setAppElement('#root');
+    const customStyles = {
+        content: {
+          top: '50%',
+          left: '50%',
+          right: 'auto',
+          bottom: 'auto',
+          padding: '10rem',
+          marginRight: '-50%',
+          transform: 'translate(-50%, -50%)',
+        },
+      };
 
     async function openModal(){
         await setTimeout(()=>{
@@ -35,8 +44,8 @@ export function Button(props: ButtonProps) {
         
         <>
         <Modal
-        isOpen={modalIsOpen}
-        contentLabel="Example Modal"
+        isOpen={ modalIsOpen }
+        style={ customStyles }
         >
             <div className={styles.modalContent}>
                 <h1>Muito Obrigado, sua opinião é muito importante para nós!</h1>
